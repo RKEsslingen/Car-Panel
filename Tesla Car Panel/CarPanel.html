@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Car-Panel</title>
+    <link rel="stylesheet" href="css-carpanel.css">
+</head>
+
+<body>
+    <header>
+        <div class="DatumundUhrzeit" id="Datum"></div>
+        <img id="OnOffIcon" class="DatumundUhrzeit" src="onoff.png">
+        <div class="DatumundUhrzeit" id="Zeit"></div>
+    </header>
+
+    <main>
+        <div class="DivTeslaFront" id="TeslaFrontPic">
+            <img class="TeslaFront" src="TeslaHome.gif">
+        </div>
+
+        <div class="DataFront">
+            <div class="Fahrdaten" id="SpeedFrontIcon">
+                <img id="SpeedIcon" class="DataIcons" src="speedometer.png">
+            </div>
+            <div class="Fahrdaten" id="Geschwindigkeit"></div>
+
+            <div class="Fahrdaten" id="FuelFrontIcon">
+                <img id="FuelIcon" class="DataIcons" src="tank.png">
+            </div>
+            <div class="Fahrdaten" id="Verbrauch"></div>
+
+            <div class="Fahrdaten" id="PressureFrontIcon">
+                <img id="PressureIcon" class="DataIcons" src="druck.png">
+            </div>
+            <div class="Fahrdaten" id="Druck"></div>
+
+            <div class="Fahrdaten" id="HumidityFrontIcon">
+                <img id="HumidityIcon" class="DataIcons" src="feuchtigkeit.png">
+            </div>
+            <div class="Fahrdaten" id="Humidity"></div>
+
+            <div class="Fahrdaten" id="TempFrontIcon">
+                <img id="TempIcon" class="DataIcons" src="temperature.png">
+            </div>
+            <div class="Fahrdaten" id="Temperatur"></div>
+        </div>
+
+        <div class="NaviFront">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d42132.58083461726!2d9.642557529864106!3d48.700008489479686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1576308997815!5m2!1sde!2sde"
+                width="80%" height="80%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+
+        <div class="MusicFront">
+            <div class="DivMusicInformation">
+                <img id="ArtistIcon" class="MusicInformation" src="musiker.png">
+                <div class="MusicInformation" id="ArtistText"></div>
+                <img id="TitelIcon" class="MusicInformation" src="musiknoten.png">
+                <div class="MusicInformation" id="TitelText"></div>
+            </div>
+
+            <div class="DivAudioControl" id="AudioControl">
+                <audio controls id="MediaPlayer">
+                </audio>
+            </div>
+           
+            <table id="MusicTabel">
+                <tr id="MainRow">
+                  <th >Artist</th>
+                  <th >Titel</th>                   
+                </tr>
+               
+              </table>
+
+            
+        </div>
+
+        <div class="CarFunctionsFront">
+
+            <div class="WindowFront" id="WindowIcon">
+                <div class="WindowCommand" id="WindowMainIcon">
+                    <img id=WindowUpDownIcon class="WindowSymbol" src="Window.png">
+                </div>
+                <div class="WindowCommand" id="LeftUp">
+                    <div class="WindowCommandButton" id="LeftUpButton">Left Up</div>
+                </div>
+                <div class="WindowCommand" id="RightUp">
+                    <div class="WindowCommandButton" id="RightUpButton">Right Up</div>
+                </div>
+                <div class="WindowCommand" id="AllUp">
+                    <div class="WindowCommandButton" id="AllUpButton">All Up</div>
+                </div>
+                <div class="WindowCommand" id="LeftDown">
+                    <div class="WindowCommandButton" id="LeftDownButton">Left Down</div>
+                </div>
+                <div class="WindowCommand" id="RightDown">
+                    <div class="WindowCommandButton" id="RightDownButton">Right Down</div>
+                </div>
+                <div class="WindowCommand" id="AllDown">
+                    <div class="WindowCommandButton" id="AllDownButton">All Down</div>
+                </div>
+            </div>
+
+            <div class="LockUnlockFront" id="LockMainIcon">
+                <img id="UnlockIcon" class="LockUnlockIcons" src="unlock.png">
+                <img id="LockIcon" class="LockUnlockIcons" src="lock.png" style="display: none;">
+            </div>
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="button" id="DataButton">
+            <img id="DataIcon" class="icons" id="DataIcon" src="Lenkrad.png">
+        </div>
+
+        <div class="button" id="NaviButton">
+            <img id="NaviIcon" class="icons" id="NaviIcon" src="Navigation.png">
+        </div>
+
+        <div class="button" id="TeslaButton">
+            <img id="TeslaIcon" class="icons" src="tesla_logo_PNG12.png">
+        </div>
+        <div class="button" id="MusicButton">
+            <img id="MusicIcon" class="icons" id="MusicIcon" src="Music.png">
+        </div>
+        <div class="button" id="CarFunctionButton">
+            <img id="CarFuncIcon" class="icons" id="CarFuncIcon" src="auto.png">
+        </div>
+
+    </footer>
+
+    <script src="js-carpanel.js">    </script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 8vh auto 20vh;
+    grid-template-areas: "header""main""footer";
+    background-color: rgba(194, 190, 190, 0.4);
+    font-family: 'Helvetica Neue', sans-serif;
+ 
+}
+
+header{
+   grid-area: header;
+   display: grid;
+   grid-template-columns: auto auto auto;
+}
+#OnOffIcon{
+    max-width: 10%;
+}
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+    display: none;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-areas: "Data Navi Tesla Music Car-Func";
+}
+
+.DatumundUhrzeit {
+    font-size: 200%; 
+    margin: auto; 
+    }
+.button{
+    height: 100%;
+    position: relative; 
+    
+    }
+
+.icons{
+    max-width: 40%;
+  height: auto;
+  display: flex;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+.DivTeslaFront{
+    height: 100%;
+    position: relative; 
+    display: none;
+}
+.TeslaFront{
+    max-width: 50%;
+    height: auto;
+    border-radius: 20px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.DataFront{
+    height: 100%;
+    display: none;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-area: "SpeedIcon Speed", "FuelIcon Fuel", "PressureIcon Pressure", "HumidityIcon Humidity", "TempIcon Temp";
+
+}
+.Fahrdaten{
+    height: 100%;
+    position: relative; 
+    text-align: center;
+    font-size: 40px;
+
+
+}
+.DataIcons{
+    max-width: 13%;
+    height: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.NaviFront{
+    height: 100%;
+    display: none;
+    position: relative; 
+}
+iframe{
+position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.MusicFront{
+    display: none;
+    height: 100%;
+    position: relative; 
+    grid-template-columns: 1lfr;
+    grid-template-rows: 40% 20% 40%;
+}
+.DivMusicInformation{
+    display: grid; 
+    height: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+.MusicInformation{
+max-width: 15%;
+margin: auto;
+
+}
+.DivAudioControl{
+    margin: auto;
+}
+td, tr {
+    border: 1px solid black;}
+
+.CarFunctionsFront{
+    height: 100%;
+    display: none;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-area: "WindowFront" "LockUnlockFront";
+}
+.WindowFront{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% auto auto auto;
+    grid-template-rows: 50% 50%;
+    grid-area: 
+    "WindowMain LeftUp RightUp AllUp" 
+    "WindowMain LeftDown RightDown AllDown";
+
+}
+.LockUnlockFront{
+    height: 100%;
+    position: relative;     
+}
+.LockUnlockIcons{
+    max-width: 15%;
+    height: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+#DataButton{
+    grid-area: Data;
+}
+#NaviButton{
+    grid-area: Navi;
+}
+#TeslaButton{
+    grid-area: Tesla;
+}
+#MusicButton{
+    grid-area: Music;
+}
+#CarFunctionButton{
+    grid-area: Car-Func;
+}
+
+#WindowMainIcon{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.WindowCommand{
+    height: 100%;
+    position: relative;   
+}
+.WindowSymbol{
+    max-width: 30%;
+    height: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.WindowCommandButton{
+    
+    height: 70%;
+    width: 70%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: rgba(255, 1, 0, 0.9); 
+   border: none;
+   border-radius: 20px;
+   color: white;  
+   text-align: center;
+   padding: 0;
+}

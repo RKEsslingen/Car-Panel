@@ -1,0 +1,140 @@
+
+ 
+
+
+    var DivTeslaFront = document.querySelector("main");
+
+   DivTeslaFront.innerHTML="";
+   DivTeslaFront.style.display="block";
+   
+   var CreateDivTeslaFront = document.createElement("div");
+   CreateDivTeslaFront.class="DivTeslaFront";
+   CreateDivTeslaFront.id="TeslaFrontPic";
+
+   DivTeslaFront.appendChild(CreateDivTeslaFront);
+
+   var CreatePicTeslaGif = document.createElement("img");
+   CreatePicTeslaGif.class="TeslaFront";
+   CreatePicTeslaGif.src="TeslaHome.gif";
+
+   CreateDivTeslaFront.appendChild(CreatePicTeslaGif);
+
+
+
+
+
+    var SpeedMain = document.querySelector("main");
+
+    SpeedMain.innerHTML = '';
+
+    SpeedMain.style.display = "grid";
+    SpeedMain.style.gridTemplateColumns = '1fr 1fr';
+    SpeedMain.style.gridTemplateRows = '1fr 1fr';
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d42132.58083461726!2d9.642557529864106!3d48.700008489479686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1576308997815!5m2!1sde!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+
+style="grid-area: WindowMain;"
+
+        grid-area: "WindowMain LeftUp RightUp AllUp" "WindowMain LeftDown RightDown AllDown";
+
+              <img id="LockIcon" class="LockUnlockIcons" src="lock.png">
+            </div>
+            <div class="LockUnlockFront" id="UnlockMainIcon">
+                <img id="UnlockIcon" class="LockUnlockIcons" src="unlock.png">
+            </div>
+                       
+
+#LeftUp{
+    grid-area: LeftUp;
+}
+#RightUp{
+    grid-area: RightUp;
+}
+#AllUp{
+    grid-area: Allup;
+}
+#LeftDown{
+    grid-area: LeftDown;
+}
+#RightDown {
+    grid-area: RightDown;
+}
+#AllDown{
+    grid-area: AllDown;
+}
+
+
+
+    fetch("http://192.168.2.110:5000/music")
+        .then(function (response) {
+            console.log(response);
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            SongArray = JSON.parse(data);
+
+
+
+        });
+
+
+document.getElementById("SongSelect").innerHTML = "";
+
+    var y = document.getElementById("SongSelect");
+    var x = document.createElement("SELECT");
+    x.setAttribute("id", "mySelect");
+    y.appendChild(x);
+
+
+    for (var i = 0; i < tracks.length; i++) {
+
+        var z = document.createElement("option");
+        z.value=i;
+        var t = document.createTextNode(tracks[i].artist+tracks[i].title);
+        z.appendChild(t);
+        x.appendChild(z);
+
+    }
+    ar x = document.getElementById("MusicTable")[index].id;
+    //Add Songs
+    for (var i=1; i<=tracks.length; i++){
+        
+       
+        document.getElementById("MusicTabel").insertRow(i);
+    }
+
+
+    elif action == "RightUp":
+        sense = SenseHat()
+    sense.show_message("RIGHT UP", text_colour=(255, 255, 0), back_colour=(0, 0, 0))
+         elif action == "AllUp":
+         sense = SenseHat()
+    sense.show_message("ALL UP", text_colour=(255, 255, 0), back_colour=(0, 0, 0))
+    elif action == "LeftDown":
+        sense = SenseHat()
+    sense.show_message("LEFT DOWN", text_colour=(255, 0, 0), back_colour=(0, 0, 0))
+    elif action == "RightDown":
+        sense = SenseHat()
+        sense.show_message("LEFT DOWN", text_colour=(255, 0, 0), back_colour=(0, 0, 0))
+        else action == "AllDown":
+        sense = SenseHat()
+        sense.show_message("LEFT DOWN", text_colour=(255, 0, 0), back_colour=(0, 0, 0))
+
+if action == "AllUp":
+         sense = SenseHat()
+    sense.show_message("ALL UP", text_colour=(255, 255, 0), back_colour=(0, 0, 0))
+
+    if action == "LeftDown":
+        sense = SenseHat()
+    sense.show_message("LEFT DOWN", text_colour=(255, 0, 0), back_colour=(0, 0, 0))
+
+    if action == "RightDown":
+        sense = SenseHat()
+        sense.show_message("LEFT DOWN", text_colour=(255, 0, 0), back_colour=(0, 0, 0))
+    
+    if action == "AllDown":
+        sense = SenseHat()
+        sense.show_message("LEFT DOWN", text_colour=(255, 0, 0), back_colour=(0, 0, 0))
