@@ -182,9 +182,13 @@ function CreatMusic() {
 };
 
 var ClicksMusic = 0;
+var tracksPath=[];
+var tracksArtist=[];
+var tracksSong=[];
 
 function CreateSelectMusic() {
     var table = document.getElementById("MusicTabel");
+   
 
     ClicksMusic = ClicksMusic + 1;
     if (ClicksMusic == 1) {
@@ -193,12 +197,14 @@ function CreateSelectMusic() {
             var row = table.insertRow(-1);
             row.id = i;
             var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            cell1.id =  i+" Artist";
-            cell2.id = i+" Title";
-
-            cell1.innerHTML = tracks[i].artist;
-            cell2.innerHTML = tracks[i].title;
+            cell1.id =  i;            
+            cell1.innerHTML = tracks[i].artist + " " + tracks[i].title;
+            tracksPath[i]=tracks[i].path;            
+            tracksArtist[i]=tracks[i].artist;
+            tracksSong[i]=tracks[i].title;
+            console.log(tracksPath[i]);
+            console.log(tracksArtist[i]);
+            console.log(tracksSong[i]);
 
         };
     };
@@ -206,11 +212,11 @@ function CreateSelectMusic() {
 
 function MusicPlayer() {
 
-    var MusicPlayerSelector = document.getElementById(event.target.id);   
-    var SetSource = document.createElement("source")
+   
+    var SetSource = document.createElement("source");
     SetSource.id="SongSource";
     SetSource.type="audio/mp3";
-    SetSource.src=tracks[parseInt(MusicPlayerSelector)].path;
+    SetSource.src=tracksPath[event.target.id];
     
     document.getElementById("MediaPlayer").appendChild(SetSource);
 };
