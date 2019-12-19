@@ -14,7 +14,7 @@ header{
    grid-template-columns: auto auto auto;
 }
 #OnOffIcon{
-    max-width: 10%;
+    max-width: 5%;
 }
 main{
     grid-area: main;
@@ -34,7 +34,6 @@ footer{
 .button{
     height: 100%;
     position: relative; 
-    
     }
 
 .icons{

@@ -39,6 +39,9 @@ document.querySelector("footer").addEventListener("click", ButtonFunction);
 document.getElementById("LockMainIcon").addEventListener("click", ButtonFunction);
 document.getElementById("WindowIcon").addEventListener("click", CreateCarFunction);
 document.querySelector("header").addEventListener("click", ButtonFunction);
+document.getElementById("MusicTabel").addEventListener("click", MusicPlayer);
+
+
 
 
 function ButtonFunction() {
@@ -114,10 +117,10 @@ function TurningCarOn() {
     }
     else {
         document.getElementsByClassName("DivTeslaFront")[0].style.display = "none";
-    document.getElementsByClassName("DataFront")[0].style.display = "none";
-    document.getElementsByClassName("NaviFront")[0].style.display = "none";
-    document.getElementsByClassName("MusicFront")[0].style.display = "none";
-    document.querySelector("footer").style.display = "none";
+        document.getElementsByClassName("DataFront")[0].style.display = "none";
+        document.getElementsByClassName("NaviFront")[0].style.display = "none";
+        document.getElementsByClassName("MusicFront")[0].style.display = "none";
+        document.querySelector("footer").style.display = "none";
     }
 
 
@@ -127,7 +130,7 @@ function CreateSpeedandFuel() {
     document.getElementsByClassName("DataFront")[0].style.display = "grid";
 
 
-    fetch("http://192.168.2.110:5000/status")
+    fetch("http://192.168.0.60:5000/status")
         .then(function (response) {
             console.log(response);
             return response.json();
@@ -163,11 +166,10 @@ function ShowTeslaGif() {
 var tracks;
 
 function CreatMusic() {
+
     document.getElementsByClassName("MusicFront")[0].style.display = "grid";
 
-
-
-    fetch("http://192.168.2.110:5000/music")
+    fetch("http://192.168.0.60:5000/music")
         .then(function (response) {
             response.text()
                 .then(function (text) {
@@ -179,35 +181,66 @@ function CreatMusic() {
         });
 };
 
+var ClicksMusic = 0;
+
 function CreateSelectMusic() {
+    var table = document.getElementById("MusicTabel");
+
+    ClicksMusic = ClicksMusic + 1;
+    if (ClicksMusic == 1) {
+
+        for (var i = 0; i < tracks.length; i++) {
+            var row = table.insertRow(-1);
+            row.id = i;
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.id =  i+" Artist";
+            cell2.id = i+" Title";
+
+            cell1.innerHTML = tracks[i].artist;
+            cell2.innerHTML = tracks[i].title;
+
+        };
+    };
+};
+
+function MusicPlayer() {
+
+    var MusicPlayerSelector = document.getElementById(event.target.id);   
+    var SetSource = document.createElement("source")
+    SetSource.id="SongSource";
+    SetSource.type="audio/mp3";
+    SetSource.src=tracks[parseInt(MusicPlayerSelector)].path;
+    
+    document.getElementById("MediaPlayer").appendChild(SetSource);
+};
 
 
-}
 
 function CreateCarFunction() {
     document.getElementsByClassName("CarFunctionsFront")[0].style.display = "grid";
     var a = event.target.id;
 
     if (a == "LeftUp" || a == "LeftUpButton") {
-        fetch("http://192.168.2.110:5000/window/LeftUp", { mode: 'no-cors' });
+        fetch("http://192.168.0.60:5000/window/LeftUp", { mode: 'no-cors' });
     }
     else if (a == "RightUp" || a == "RightUpButton") {
-        fetch("http://192.168.2.110:5000/window/RightUp", { mode: 'no-cors' });
+        fetch("http://192.168.0.60:5000/window/RightUp", { mode: 'no-cors' });
     }
     else if (a == "AllUp" || a == "AllUpButton") {
-        fetch("http://192.168.2.110:5000/window/AllUp", { mode: 'no-cors' });
+        fetch("http://192.168.0.60:5000/window/AllUp", { mode: 'no-cors' });
     }
     else if (a == "LeftDown" || a == "LeftDownButton") {
-        fetch("http://192.168.2.110:5000/window/LeftDown", { mode: 'no-cors' });
+        fetch("http://192.168.0.60:5000/window/LeftDown", { mode: 'no-cors' });
     }
     else if (a == "RightDown" || a == "RightDownButton") {
-        fetch("http://192.168.2.110:5000/window/RightDown", { mode: 'no-cors' });
+        fetch("http://192.168.0.60:5000/window/RightDown", { mode: 'no-cors' });
     }
     else if (a == "AllDown" || a == "AllDownButton") {
-        fetch("http://192.168.2.110:5000/window/AllDown", { mode: 'no-cors' });
-    }
+        fetch("http://192.168.0.60:5000/window/AllDown", { mode: 'no-cors' });
+    };
 
-}
+};
 
 function LockUnlockFunction() {
     document.getElementsByClassName("CarFunctionsFront")[0].style.display = "grid";
@@ -224,7 +257,7 @@ function LockUnlockFunction() {
 
             hideWindow[i].style.display = "none";
         };
-        fetch("http://192.168.2.110:5000/action/lock");
+        fetch("http://192.168.0.60:5000/action/lock");
     }
 
     else {
@@ -238,7 +271,7 @@ function LockUnlockFunction() {
 
             showWindow[i].style.display = "grid";
         };
-        fetch("http://192.168.2.110:5000/action/unlock");
+        fetch("http://192.168.0.60:5000/action/unlock");
 
     };
 }

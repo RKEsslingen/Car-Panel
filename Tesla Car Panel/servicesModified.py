@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # Disable CORS protection altogether
 cors = CORS(app, resources={
-            r"/status": {"origins": "*"}, r"/music": {"origins": "*"}, r"/action/*": {"origins": "*"}, r"/window": {"origins": "*"}})
+            r"/status": {"origins": "*"}, r"/music": {"origins": "*"}, r"/action/*": {"origins": "*"}, r"/window/*": {"origins": "*"}})
 
 # Allow only specific IP for CORS
 # cors = CORS(app, resources={r"/status": {"origins": "http://192.168.0.204"}, r"/action/*": {"origins": "http://192.168.0.204"}})
