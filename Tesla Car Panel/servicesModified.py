@@ -63,6 +63,21 @@ def music():
         'title': 'Fade to Grey',
         'artist': 'Visage',
         'path': 'music/Visage_-_Fade_to_Grey.mp3'
+    },
+    {
+        'title': 'Otis',
+        'artist': 'Kanye West',
+        'path': 'music/04-kanye_west_and_jay_z-otis_feat_otis_redding.mp3'
+    },
+     {
+        'title': 'Paschendale',
+        'artist': 'Iron Maiden',
+        'path': 'music/08 - Paschendale.mp3'
+    },
+      {
+        'title': 'Aerials',
+        'artist': 'System of A Down',
+        'path': 'music/System Of A Down - Aerials.mp3'
     }]
 
     return jsonify(music)
@@ -121,28 +136,28 @@ def window(action):
 
     if action == "LeftUp":   
 
-        sense.show_message("LEFT UP", text_colour=(255, 255, 0), back_colour=(0, 0, 0))
+        sense.show_message("LEFT UP", text_colour=(255, 1, 0), back_colour=(0, 0, 0))
      
 
     elif action == "RightUp":
 
-        sense.show_message("RIGHT UP", text_colour=(255, 255, 0), back_colour=(0, 0, 0))
+        sense.show_message("RIGHT UP", text_colour=(255, 1, 0), back_colour=(0, 0, 0))
     
     elif action == "AllUp":
 
-        sense.show_message("ALL UP", text_colour=(255, 255, 0), back_colour=(0, 0, 0))
+        sense.show_message("ALL UP", text_colour=(255, 1, 0), back_colour=(0, 0, 0))
     
     elif action == "LeftDown":
 
-        sense.show_message("LEFT DOWN", text_colour=(255, 255, 0), back_colour=(0, 0, 0))
+        sense.show_message("LEFT DOWN", text_colour=(255, 1, 0), back_colour=(0, 0, 0))
     
     elif action == "RightDown":
 
-        sense.show_message("RIGHT DOWN", text_colour=(255, 255, 0), back_colour=(0, 0, 0))
+        sense.show_message("RIGHT DOWN", text_colour=(255, 1, 0), back_colour=(0, 0, 0))
     
     elif action == "AllDown":
 
-        sense.show_message("ALL DOWN", text_colour=(255, 255, 0), back_colour=(0, 0, 0))
+        sense.show_message("ALL DOWN", text_colour=(255, 1, 0), back_colour=(0, 0, 0))
 
   
     return jsonify(

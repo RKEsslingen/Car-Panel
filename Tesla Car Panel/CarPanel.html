@@ -53,53 +53,57 @@
         </div>
 
         <div class="MusicFront">
-            <div class="DivMusicInformation">
-                <img id="ArtistIcon" class="MusicInformation" src="musiker.png">
-                <div class="MusicInformation" id="ArtistText"></div>
-                <img id="TitelIcon" class="MusicInformation" src="musiknoten.png">
-                <div class="MusicInformation" id="TitelText"></div>
-            </div>
+
+
+            <div class="MusicInformation" id="ArtistText"></div>
+
+
 
             <div class="DivAudioControl" id="AudioControl">
                 <audio controls id="MediaPlayer">
-                    
+
                 </audio>
             </div>
-           
-            <table id="MusicTabel">
-                <tr id="MainRow">
-                  <th >Playlist</th>
-                                  
-                </tr>
-               
-              </table>
 
-            
+            <div class="DivTable" style="width:90%; height:80%; overflow:auto; margin: auto;">
+                <table id="MusicTabel">
+                    <tr id="MainRow">
+                        <th>Playlist</th>
+
+                    </tr>
+
+                </table>
+            </div>
+
         </div>
 
         <div class="CarFunctionsFront">
 
             <div class="WindowFront" id="WindowIcon">
-                <div class="WindowCommand" id="WindowMainIcon">
-                    <img id=WindowUpDownIcon class="WindowSymbol" src="Window.png">
+                <div class="WindowStatus" id="StatusInfoFenster">
+                    Status Fenster:
                 </div>
-                <div class="WindowCommand" id="LeftUp">
-                    <div class="WindowCommandButton" id="LeftUpButton">Left Up</div>
+                <div class="WindowCommandButton" id="LeftUp">
+                    <p id="LeftUpButton">Left<br>Up</p>
+                    
                 </div>
-                <div class="WindowCommand" id="RightUp">
-                    <div class="WindowCommandButton" id="RightUpButton">Right Up</div>
+                <div class="WindowCommandButton" id="RightUp">
+                    <p id="RightUpButton">Right<br>Up</p>
                 </div>
-                <div class="WindowCommand" id="AllUp">
-                    <div class="WindowCommandButton" id="AllUpButton">All Up</div>
+                <div class="WindowCommandButton" id="AllUp">
+                    <p id="AllUpButton">All<br>Up</p>
                 </div>
-                <div class="WindowCommand" id="LeftDown">
-                    <div class="WindowCommandButton" id="LeftDownButton">Left Down</div>
+                <div class="WindowStatus" id="AktuellerStatusFenster">
+                    Alle Fenster geschlossen
                 </div>
-                <div class="WindowCommand" id="RightDown">
-                    <div class="WindowCommandButton" id="RightDownButton">Right Down</div>
+                <div class="WindowCommandButton" id="LeftDown">
+                    <p id= "LeftDownButton">Left<br>Down</p>
                 </div>
-                <div class="WindowCommand" id="AllDown">
-                    <div class="WindowCommandButton" id="AllDownButton">All Down</div>
+                <div class="WindowCommandButton" id="RightDown">
+                    <p id="RightDownButton">Right<br>Down</p>
+                </div>
+                <div class="WindowCommandButton" id="AllDown">
+                    <p id="AllDownButton">All<br>Down</p>
                 </div>
             </div>
 

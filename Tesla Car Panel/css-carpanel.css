@@ -1,10 +1,11 @@
 body{
     height: 100vh;
     display: grid;
-    grid-template-rows: 8vh auto 20vh;
+    grid-template-rows: 10vh auto 20vh;
     grid-template-areas: "header""main""footer";
     background-color: rgba(194, 190, 190, 0.4);
     font-family: 'Helvetica Neue', sans-serif;
+    margin: 0px;
  
 }
 
@@ -12,9 +13,11 @@ header{
    grid-area: header;
    display: grid;
    grid-template-columns: auto auto auto;
+   width: 80%;
+   margin: auto;
 }
 #OnOffIcon{
-    max-width: 5%;
+    max-width: 4%;
 }
 main{
     grid-area: main;
@@ -28,22 +31,20 @@ footer{
 }
 
 .DatumundUhrzeit {
-    font-size: 200%; 
+    font-size: 150%; 
     margin: auto; 
     }
 .button{
     height: 100%;
-    position: relative; 
     }
 
 .icons{
-    max-width: 40%;
-  height: auto;
-  display: flex;
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
+    max-width: 10vh;
+    height: auto;
+    display: flex;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 .DivTeslaFront{
     height: 100%;
@@ -60,28 +61,23 @@ footer{
    transform: translate(-50%, -50%);
 }
 .DataFront{
-    height: 100%;
+    height: 80%;
     display: none;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 20% 20% 20% 20%;
-    grid-area: "SpeedIcon Speed", "FuelIcon Fuel", "PressureIcon Pressure", "HumidityIcon Humidity", "TempIcon Temp";
-
-}
+    margin-top: 10vh;
+  }
 .Fahrdaten{
     height: 100%;
-    position: relative; 
-    text-align: center;
-    font-size: 40px;
-
+    margin: auto;
+    font-size: 4vh;
 
 }
 .DataIcons{
-    max-width: 13%;
+    max-width: 5%;
     height: auto;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+    position: absolute;
+
 }
 .NaviFront{
     height: 100%;
@@ -89,59 +85,76 @@ footer{
     position: relative; 
 }
 iframe{
-position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .MusicFront{
     display: none;
     height: 100%;
-    position: relative; 
-    grid-template-columns: 1lfr;
-    grid-template-rows: 40% 20% 40%;
+    grid-template-rows: 25% 15% 60%;
+    
 }
-.DivMusicInformation{
-    display: grid; 
-    height: 100%;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-}
+
 .MusicInformation{
-max-width: 15%;
+max-width: 80%;
 margin: auto;
+font-size: 200%;
 
 }
 .DivAudioControl{
     margin: auto;
 }
-td, tr {
-    border: 1px solid black;}
+table {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+}
 
+td, tr {
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 120%;
+    text-align: center;
+    padding: 1.5%;
+}
+th{
+    font-size: 140%;
+}
 .CarFunctionsFront{
     height: 100%;
     display: none;
     grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
-    grid-area: "WindowFront" "LockUnlockFront";
+    margin-top: 5vh;
+
 }
 .WindowFront{
     height: 100%;
     display: grid;
-    grid-template-columns: 50% auto auto auto;
+    grid-template-columns: 50% 16% 16% 16%;
     grid-template-rows: 50% 50%;
-    grid-area: 
-    "WindowMain LeftUp RightUp AllUp" 
-    "WindowMain LeftDown RightDown AllDown";
-
 }
+
+.WindowStatus{
+    margin: auto;
+    font-size: 160%;
+    background-color: gray;
+    color:  white;
+    border-radius: 20px;
+    width: 70%;
+    text-align: center;
+    padding: 4vh;
+}
+
 .LockUnlockFront{
     height: 100%;
     position: relative;     
 }
 .LockUnlockIcons{
-    max-width: 15%;
+    max-width: 11%;
     height: auto;
    position: absolute;
    top: 50%;
@@ -164,34 +177,17 @@ td, tr {
     grid-area: Car-Func;
 }
 
-#WindowMainIcon{
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-.WindowCommand{
-    height: 100%;
-    position: relative;   
-}
-.WindowSymbol{
-    max-width: 30%;
-    height: auto;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
+
+
+
 .WindowCommandButton{
-    
-    height: 70%;
-    width: 70%;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+    width: 60%;
    background-color: rgba(255, 1, 0, 0.9); 
    border: none;
    border-radius: 20px;
    color: white;  
    text-align: center;
-   padding: 0;
+   font-size: 150%;
+   margin: auto;
+   padding: 1vh;
 }

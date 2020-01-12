@@ -138,3 +138,23 @@ if action == "AllUp":
     if action == "AllDown":
         sense = SenseHat()
         sense.show_message("LEFT DOWN", text_colour=(255, 0, 0), back_colour=(0, 0, 0))
+
+         var SourceChecker = document.querySelector("source");
+    if (typeof (SourceChecker) != 'undefined' && SourceChecker != null) {
+        var ChildRemover = document.getElementById("MediaPlayer");
+        ChildRemover.removeChild(ChildRemover.childNodes[0]);
+        var SetSource = document.createElement("source");
+        SetSource.id = "SongSource";
+        SetSource.type = "audio/mp3";
+        document.getElementById("MediaPlayer").appendChild(SetSource);
+        SetSource.src = tracksPath[event.target.id];
+    }
+
+       if (today.getDay() <= 9) {
+        var d = "0" + today.getDay();
+        console.log(d);
+    }
+    else {
+        
+        console.log(d);
+    };
